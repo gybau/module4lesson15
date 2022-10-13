@@ -17,8 +17,19 @@ struct BookCardView: View {
                         Rectangle()
                             .foregroundColor(.white)
                         VStack(alignment: .leading) {
-                            Text(book.title)
-                                .font(.largeTitle)
+                            HStack {
+                                Text(book.title)
+                                    .font(.largeTitle)
+                                Spacer()
+                                if book.isFavourite {
+                                    Image(systemName: "star.fill")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 35)
+                                        .foregroundColor(.yellow)
+                                }
+                                    
+                            }
                             Text(book.author)
                                 .font(.callout)
                             Image("cover\(book.id)")
