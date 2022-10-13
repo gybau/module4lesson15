@@ -35,6 +35,38 @@ struct BookCardView: View {
                             Image("cover\(book.id)")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
+                            VStack(alignment: .leading) {
+                                Text("Your rating:")
+                                HStack {
+                                    if book.rating != 0 {
+                                        ForEach (1..<book.rating+1, id: \.self) { r in
+                                            Image(systemName: "star.fill")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: 35)
+                                                .foregroundColor(.yellow)
+                                        }
+                                        ForEach (1..<6-book.rating, id: \.self) { r in
+                                            Image(systemName: "star")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: 35)
+                                                .foregroundColor(.yellow)
+                                        }
+                                    } else {
+                                        
+                                        ForEach (1..<6) { _ in
+                                            Image(systemName: "star")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: 35)
+                                                .foregroundColor(.yellow)
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                            
                         }.padding()
                     }
                     .cornerRadius(10)
