@@ -17,14 +17,22 @@ struct BookDetailView: View {
     
     var body: some View {
         VStack {
-            Text("Read now!")
-                .font(.title)
-                
-                .padding()
-            Image("cover\(book.id)")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 250)
+            NavigationLink {
+                BookPageView(book: book)
+            } label: {
+                VStack {
+                    Text("Read now!")
+                        .font(.title)
+                        .padding()
+                        .foregroundColor(.black)
+                    Image("cover\(book.id)")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 250)
+                }
+            }
+
+            
             
             Text("Mark for later:")
                 .font(.callout)

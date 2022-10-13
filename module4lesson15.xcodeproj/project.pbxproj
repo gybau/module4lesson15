@@ -17,6 +17,7 @@
 		6D69559528F83B69004C5D69 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69559428F83B69004C5D69 /* BookModel.swift */; };
 		6D69559928F83FD8004C5D69 /* BookCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D69559828F83FD8004C5D69 /* BookCardView.swift */; };
 		6DD104C428F8657200FCD7EE /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD104C328F8657200FCD7EE /* BookDetailView.swift */; };
+		6DD104C628F8980E00FCD7EE /* BookPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD104C528F8980E00FCD7EE /* BookPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		6D69559428F83B69004C5D69 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		6D69559828F83FD8004C5D69 /* BookCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCardView.swift; sourceTree = "<group>"; };
 		6DD104C328F8657200FCD7EE /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		6DD104C528F8980E00FCD7EE /* BookPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				6D37521228F8268600F22AB5 /* BookScrollView.swift */,
 				6D69559828F83FD8004C5D69 /* BookCardView.swift */,
 				6DD104C328F8657200FCD7EE /* BookDetailView.swift */,
+				6DD104C528F8980E00FCD7EE /* BookPageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DD104C628F8980E00FCD7EE /* BookPageView.swift in Sources */,
 				6DD104C428F8657200FCD7EE /* BookDetailView.swift in Sources */,
 				6D69559528F83B69004C5D69 /* BookModel.swift in Sources */,
 				6D69559328F836F6004C5D69 /* Book.swift in Sources */,
