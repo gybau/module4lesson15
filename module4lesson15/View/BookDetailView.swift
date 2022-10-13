@@ -22,7 +22,7 @@ struct BookDetailView: View {
             } label: {
                 VStack {
                     Text("Read now!")
-                        .font(.title)
+                        .font(Font.custom("Avenir Heavy", size: 25))
                         .padding()
                         .foregroundColor(.black)
                     Image("cover\(book.id)")
@@ -35,8 +35,8 @@ struct BookDetailView: View {
             
             
             Text("Mark for later:")
-                .font(.callout)
                 .padding(.top)
+                .font(Font.custom("Avenir", size: 20))
             
             Button(action: { model.updateFavourite(forId: book.id) }) {
                 Image(systemName: book.isFavourite ? "star.fill" : "star")
@@ -47,6 +47,7 @@ struct BookDetailView: View {
             
             Text("Rate \(book.title)")
                 .padding()
+                .font(Font.custom("Avenir", size: 20))
             
             Picker("", selection: $selectedRating) {
                 Text("1").tag(1)
@@ -60,6 +61,7 @@ struct BookDetailView: View {
             .onChange(of: selectedRating) { value in
                 model.updateRating(forId: book.id, rating: selectedRating)
             }
+            .font(Font.custom("Avenir", size: 20))
             
                 
                 
@@ -72,6 +74,6 @@ struct BookDetailView: View {
 struct BookDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let model = BookModel()
-        BookDetailView(book: model.books[0])
+        BookDetailView(book: model.books[1])
     }
 }

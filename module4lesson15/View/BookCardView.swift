@@ -19,7 +19,7 @@ struct BookCardView: View {
                         VStack(alignment: .leading) {
                             HStack {
                                 Text(book.title)
-                                    .font(.largeTitle)
+                                    .font(Font.custom("Avenir Heavy", size: 25))
                                 Spacer()
                                 if book.isFavourite {
                                     Image(systemName: "star.fill")
@@ -31,12 +31,14 @@ struct BookCardView: View {
                                     
                             }
                             Text(book.author)
-                                .font(.callout)
+                                .font(Font.custom("Avenir Next Italic", size: 20))
                             Image("cover\(book.id)")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                             VStack(alignment: .leading) {
                                 Text("Your rating:")
+                                    .font(Font.custom("Avenir", size: 20))
+                                    .padding(.top)
                                 HStack {
                                     if book.rating != 0 {
                                         ForEach (1..<book.rating+1, id: \.self) { r in
@@ -45,6 +47,7 @@ struct BookCardView: View {
                                                 .aspectRatio(contentMode: .fit)
                                                 .frame(width: 35)
                                                 .foregroundColor(.yellow)
+                                            
                                         }
                                         ForEach (1..<6-book.rating, id: \.self) { r in
                                             Image(systemName: "star")

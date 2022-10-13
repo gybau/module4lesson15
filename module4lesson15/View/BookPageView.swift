@@ -20,8 +20,10 @@ struct BookPageView: View {
                     VStack(alignment: .center) {
                         Text(book.content[index])
                             .tag(index)
+                            .font(Font.custom("Avenir", size: 20))
                         Spacer()
                         Text(String(index+1))
+                            .font(Font.custom("Avenir", size: 20))
                             
                     }
                     

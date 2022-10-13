@@ -15,8 +15,13 @@ struct BookScrollView: View {
     var body: some View {
         
         NavigationView {
+            
             ScrollView {
-                LazyVStack {
+                
+                LazyVStack(alignment: .leading) {
+                    Text("My library")
+                        .font(Font.custom("Avenir Heavy", size: 40))
+                        .padding()
                     ForEach (model.books) { b in
                         NavigationLink {
                             BookDetailView(book: b)
@@ -29,7 +34,8 @@ struct BookScrollView: View {
                     }
                 }
                 
-            }.navigationTitle("My library")
+            }//.navigationTitle("My library")
+                
         }
         
     }
